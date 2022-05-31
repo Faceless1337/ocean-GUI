@@ -1,0 +1,13 @@
+<ScreenView>:
+    MDBottomAppBar:
+
+        MDToolbar:
+            title: ""
+            icon: "plus"
+            type: "bottom"
+            on_action_button: root.open_dialog(mode="input")
+            md_bg_color: app.theme_cls.accent_color
+
+            right_action_items: [["upload", lambda x: root.open_dialog(mode="upload")], ["content-save-outline", lambda x: root.open_dialog(mode="save")]]
+            left_action_items: [["trash-can-outline", lambda x: root.open_dialog(mode="delete")], ["backburger", lambda x: root.next_step()]]
+
